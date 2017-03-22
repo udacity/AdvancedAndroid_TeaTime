@@ -28,5 +28,6 @@ dependencies {
     androidTestCompile 'com.android.support:support-annotations:25.1.0'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
 
+    // TODO (5) Add build dependencies required to use Espresso-Intents
 
 }
