@@ -28,11 +28,34 @@ import com.example.android.teatime.model.Tea;
 
 import java.util.ArrayList;
 
+// TODO (1) Implement ImageDownloader.DelayerCallback
 public class MenuActivity extends AppCompatActivity {
 
     Intent mTeaIntent;
 
     public final static String EXTRA_TEA_NAME = "com.example.android.teatime.EXTRA_TEA_NAME";
+
+    // TODO (2) Add a SimpleIdlingResource variable that will be null in production
+
+    /**
+     * TODO (3) Create a method that returns the IdlingResource variable. It will
+     * instantiate a new instance of SimpleIdlingResource if the IdlingResource is null.
+     * This method will only be called from test.
+     */
+
+
+    /**
+     * TODO (4) Using the method you created, get the IdlingResource variable.
+     * Then call downloadImage from ImageDownloader. To ensure there's enough time for IdlingResource
+     * to be initialized, remember to call downloadImage in either onStart or onResume.
+     * This is because @Before in Espresso Tests is executed after the activity is created in
+     * onCreate, so there might not be enough time to register the IdlingResource if the download is
+     * done too early.
+     */
+
+
+    // TODO (5) Override onDone so when the thread in ImageDownloader is finished, it returns an
+    // ArrayList of Tea objects via the callback.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,10 +92,7 @@ public class MenuActivity extends AppCompatActivity {
                 String teaName = item.getTeaName();
                 mTeaIntent.putExtra(EXTRA_TEA_NAME, teaName);
                 startActivity(mTeaIntent);
-
             }
         });
-
     }
-
 }

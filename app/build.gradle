@@ -20,6 +20,7 @@ android {
 }
 
 dependencies {
+    //TODO (9) Add espresso idling resource gradle dependency
     compile 'com.android.support:design:25.1.0'
     compile 'com.android.support:support-annotations:25.1.0'
     compile 'com.google.android.gms:play-services-appindexing:9.8.0'
@@ -30,4 +31,6 @@ dependencies {
     androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
     androidTestCompile 'com.android.support.test:rules:0.5'
     androidTestCompile 'com.android.support.test:runner:0.5'
+
+
 }
