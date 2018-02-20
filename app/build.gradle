@@ -25,4 +25,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-appindexing:9.8.0'
 
     // TODO (4) Add the required Espresso UI Testing dependencies
+    androidTestCompile 'com.android.support:support-annotations:25.1.0'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
 }
