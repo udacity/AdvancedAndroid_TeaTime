@@ -31,8 +31,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * This test demos a user clicking the decrement button and verifying that it properly decrease
- * the quantity the total cost.
+ * This test demos a user clicking the decrement button and verifying that it properly decreases
+ * the quantity and the total cost.
  */
 
 @RunWith(AndroidJUnit4.class)
