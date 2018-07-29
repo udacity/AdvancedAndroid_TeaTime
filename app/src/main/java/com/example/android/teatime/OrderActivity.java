@@ -60,6 +60,7 @@ public class OrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
         Toolbar menuToolbar = (Toolbar) findViewById(R.id.order_toolbar);
+
         setSupportActionBar(menuToolbar);
         getSupportActionBar().setTitle(getString(R.string.order_title));
 
@@ -111,8 +112,9 @@ public class OrderActivity extends AppCompatActivity {
                     case 2:
                         mSize = getString(R.string.tea_size_large);
                         break;
-
                 }
+                //update Total Cost TextView when changing the size
+                displayCost(calculatePrice());
             }
 
             // Because AdapterView is an abstract class, onNothingSelected must be defined
