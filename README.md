@@ -1,4 +1,4 @@
-# TeaTime
+# TeaTime - Testing Framework
 
 This is the toy app for the Espresso lesson of the [Advanced Android App Development course on Udacity](https://www.udacity.com/course/advanced-android-app-development--ud855).
 
