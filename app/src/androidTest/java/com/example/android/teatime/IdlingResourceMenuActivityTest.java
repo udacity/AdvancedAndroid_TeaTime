@@ -17,16 +17,16 @@
 package com.example.android.teatime;
 
 
-import static android.support.test.espresso.Espresso.onData;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
+import static androidx.test.espresso.Espresso.onData;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.anything;
 
-import android.support.test.espresso.Espresso;
-import android.support.test.espresso.IdlingResource;
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
+
+import androidx.test.espresso.Espresso;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.rule.ActivityTestRule;
 
 import org.junit.After;
 import org.junit.Before;
@@ -52,7 +52,7 @@ import org.junit.runner.RunWith;
 
 
 @RunWith(AndroidJUnit4.class)
-public class IdlingResourceMenuActivityTest {
+public class IdlingResourceMenuActivityTest<IdlingResource> {
 
     /**
      * The ActivityTestRule is a rule provided by Android used for functional testing of a single
@@ -66,7 +66,7 @@ public class IdlingResourceMenuActivityTest {
     public ActivityTestRule<MenuActivity> mActivityTestRule =
             new ActivityTestRule<>(MenuActivity.class);
 
-    private IdlingResource mIdlingResource;
+    private androidx.test.espresso.IdlingResource mIdlingResource;
 
 
     // Registers any resource that needs to be synchronized with Espresso before the test is run.
